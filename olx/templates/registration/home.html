@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="Website description">
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Raleway|Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css2/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Home</title>
+</head>
+
+<body>
+    <section class="main">
+        <section class="header">
+            <div class="container-fluid back-img p-0">
+                <nav class="navbar navbar-expand-lg navbar-light ">
+                    <a class="navbar-brand text-light logo font-weight-bolder ml-5 pl-5" href="{% url 'home' %}">SHOPIFY</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse menu-items mr-5 pr-5" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link active text-light" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+
+                            <a class="nav-item nav-link active text-light" href="{% url 'product:product_list' %}">Ads<span class="sr-only">(current)</span></a>
+
+                            <a class="nav-item nav-link active text-light" href="{% url 'about' %}">About <span class="sr-only">(current)</span></a>
+
+                            <a class="nav-item nav-link text-light" href="{% url 'contact' %}">Contact</a>
+
+                            <a class="nav-item nav-link text-light" href="{% url 'signup' %}">Sign Up</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="mt-5 p-4 container header-text text-center justify-content-center">
+                    <h2 class="header-h2 font-weight-bolder ">SHOPIFY</h2>
+                    <h1 class="header-h1">Your Destination For Buying/Selling Used Items</h1>
+                    <a href="{% url 'login' %}"><button type="button" class="btn btn-primary btn-lg">LOGIN</button></a>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>

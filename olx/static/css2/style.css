@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.back-img {
+    background-image: url('../images2/bg.jpg');
+    background-attachment: fixed;
+    min-height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu-items {
+    justify-content: flex-end;
+    font-size: 25px;
+}
+
+.logo {
+    font-size: 25px;
+}
+
+.header-h2 {
+    font-size: 70px;
+    color: #2c3a42;
+    font-family: "Cookie";
+    font-weight: 400;
+}
+
+.header-h1 {
+    font-size: 50px;
+    color: #ad6c12;
+    font-family: "Raleway";
+    font-weight: 600;
+}
+
+.header-btn {
+    font-size: 35px;
+    color: #26363a;
+    font-family: "Raleway";
+    font-weight: 600;
+    text-align: right;
+}
+
+.header-text {
+    background: rgba(255, 255, 255, 0.4);
+    width: 50% !important;
+}
+
+.header-Text {
+    background: rgba(255, 255, 255, 0.4);
+}
