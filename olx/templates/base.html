@@ -91,20 +91,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="logo">
                 <a href="{% url 'product:product_list' %}"><span>SHOP</span>IFY</a>
             </div>
-            <div class="header-left" style="margin-left: 3px;">
-                <a class="account" href="#">Home</a>
-            </div>
 
-            <div class="header-left" style="margin-left: 3px;">
-                <a class="account" href="#">About</a></div>
-
-            <div class="header-left" style="margin-left: 3px;">
-                <a class="account" href="#">Contact</a></div>
             {% if request.user.is_authenticated %}
+            <div class="header-right">
+                <a class="account" href="{% url 'home' %}" style="margin-left: 3px;">Home</a>
+            </div>
             <div class="header-right">
                 <a class="account" href="">{{request.user}}</a>
                 <div class="header-right">
                     <a class="account" href="{% url 'logout' %}" style="margin-left: 3px;">logout</a> {% else %}
+                    <div class="header-right">
+                        <a class="account" href="{% url 'home' %}" style="margin-left: 3px;">Home</a>
+                    </div>
                     <div class="header-right">
                         <a class="account" href="{% url 'login' %}">login</a>
                         <div class="header-right">
@@ -136,9 +134,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="col-md-3 footer-grid">
                                     <h4 class="footer-head">Help</h4>
                                     <ul>
-                                        <li><a href="howitworks.html">Our Homepage</a></li>
-                                        <li><a href="sitemap.html">Ads</a></li>
-                                        <li><a href="faq.html">Contact</a></li>
+                                        <li><a href="{% url 'home' %}">Our Homepage</a></li>
+                                        <li><a href="{% url 'product:product_list' %}">Ads</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact</a></li>
                                         <!-- <li><a href="feedback.html">Feedback</a></li>
 								<li><a href="contact.html">Contact</a></li>
 								<li><a href="typography.html">Shortcodes</a></li> -->
@@ -159,17 +157,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <address>
 								<ul class="location">
 									<li><span class="glyphicon glyphicon-map-marker"></span></li>
-									<li>CENTER FOR FINANCIAL ASSISTANCE TO DEPOSED NIGERIAN ROYALTY</li>
+									<li>Sector 74, Attrium, Mohali (Punjab), India.</li>
 									<div class="clearfix"></div>
 								</ul>	
 								<ul class="location">
 									<li><span class="glyphicon glyphicon-earphone"></span></li>
-									<li>+0 561 111 235</li>
+									<li>7347266128</li>
 									<div class="clearfix"></div>
 								</ul>	
 								<ul class="location">
 									<li><span class="glyphicon glyphicon-envelope"></span></li>
-									<li><a href="mailto:info@example.com">mail@example.com</a></li>
+									<li><a href="mailto:info@example.com">naddabhi666@gmail.com</a></li>
 									<div class="clearfix"></div>
 								</ul>						
 							</address>
