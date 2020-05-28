@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block body %}
+{% extends 'base.html' %} {% block body %} {% load static %}
 <!-- Products -->
 <div class="total-ads main-grid-border">
     <div class="container">
@@ -46,7 +46,7 @@
                     <div class="row align-items-center">
 
                         <div class="col-lg-3 mb-3 mb-xl-0 col-xl-3">
-                            <label>Browse Categories</label>
+                            <label>Browse   Brands</label>
 
                             <input type="text" name='search' class="form-control rounded" placeholder="What are you looking for?">
                         </div>
@@ -65,8 +65,8 @@
                         </select>
                       </div>
                     </div> -->
-                        <div class="col-lg-2 col-xl-2 ml-auto" style="margin-top:20px;">
-                            <input type="submit" class="btn-sm active" style="padding:5px;margin:0px 5px;background-color: darkcyan; color: white;border-color: darkcyan;border-style: hidden;" value="Search">
+                        <div class="col-lg-4 col-xl-4 ml-auto" style="margin-top:20px;">
+                            <input type="submit" class="btn-sm active" style="padding:8px;margin-left: -83px;background-color:#01a185; color:#fff;;border-color: darkcyan;border-style: hidden;" value="Search">
                         </div>
 
                     </div>
@@ -96,46 +96,47 @@
                         <input type="submit" value=" ">
                     </form>
                 </div>
-
-
                 <div class="featured-ads">
                     <h2 class="sear-head fer">Featured Ads</h2>
                     <div class="featured-ad">
-                        <a href="single.html">
+                        <a href="#">
                             <div class="featured-ad-left">
-                                <img src="images/mrf.jpg" title="ad image" alt="" />
+                                <img src="{% static 'images/e10.jpg' %}" title="ad image" alt="" />
                             </div>
                             <div class="featured-ad-right">
-                                <h4>MRF Cricket Kit</h4>
-                                <p>$ 450</p>
+                                <h4>Nikon DSLR</h4>
+                                <p>Rs40000 </p>
                             </div>
                             <div class="clearfix"></div>
                         </a>
                     </div>
                     <div class="featured-ad">
-                        <a href="single.html">
+                        <a href="#">
                             <div class="featured-ad-left">
-                                <img src="images/f2.jpg" title="ad image" alt="" />
+                                <img src="{% static 'images/f2.jpg' %}" title="ad image" alt="" />
                             </div>
                             <div class="featured-ad-right">
-                                <h4>ZARA T-Shirts</h4>
-                                <p>$ 380</p>
+                                <h4>Nissan Terra SUV</h4>
+                                <p>Rs2500000</p>
                             </div>
                             <div class="clearfix"></div>
                         </a>
                     </div>
+
                     <div class="featured-ad">
-                        <a href="single.html">
+
+                        <a href="#">
                             <div class="featured-ad-left">
-                                <img src="images/f3.jpg" title="ad image" alt="" />
+                                <img src="{% static 'images/f3.jpg' %}" title="ad image" alt="" />
                             </div>
                             <div class="featured-ad-right">
-                                <h4>PUMA Gold Edition Shoes</h4>
-                                <p>$ 560</p>
+                                <h4>Moto g6</h4>
+                                <p>15998</p>
                             </div>
                             <div class="clearfix"></div>
                         </a>
                     </div>
+
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -163,7 +164,7 @@
                                                     </section>
                                                     <section class="list-right">
                                                         <span class="date">Posted on: {{product.created}}</span>
-                                                        <span class="cityname">City name</span>
+                                                        <span class="cityname">{{product.city}}</span>
                                                     </section>
                                                     <div class="clearfix"></div>
                                                 </li>

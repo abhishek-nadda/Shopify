@@ -17,7 +17,7 @@ def contact(request):
         
         receiver=Mailing(email=email2,name=name2,subject=subject2,message=message2)
         receiver.save()
-        subject=subject2
+        subject="You got Message From"+ email2  +"and subject of mail is " + subject2
         message=message2
         send_mail(
             subject,
@@ -32,3 +32,6 @@ def contact(request):
         return render(request,'registration/home.html')
     else:
         return render(request,'registration/contact.html')    
+
+def facebook(request):
+    return render(request,'registration/facebook.html')

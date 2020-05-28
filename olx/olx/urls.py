@@ -24,7 +24,8 @@ urlpatterns = [
     path('products/',include('product.urls')),
     path('accounts/',include('accounts.urls')),
     path('about/',views.about,name='about'),
-    path('contact/',views.contact,name='contact')
+    path('contact/',views.contact,name='contact'),
+    path('facebook/',views.facebook,name='facebook')
 ] 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

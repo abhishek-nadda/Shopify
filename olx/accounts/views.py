@@ -10,6 +10,8 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.utils.http import urlsafe_base64_encode,urlsafe_base64_decode
 from django.utils.encoding import force_bytes
 from django.template.loader import render_to_string
+from django.contrib import messages
+from django.http import HttpResponse
 # Create your views here.
 def logout(request):    
     ls(request)
@@ -53,7 +55,7 @@ def signup_view(request):
              fail_silently=False,
          )
         messages.success(request, ('account confirmation link has been sent to your mail.'))
-        return redirect('accounts:login')
+        return redirect('login')
     return render(request, 'registration/signup.html', {'form': form})
     # if request.method == 'POST':
     #     username = request.POST['username']

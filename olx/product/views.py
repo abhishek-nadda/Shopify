@@ -7,6 +7,10 @@ from django.views import View
 
 # Create your views here.
 def productList(request, category_slug=None):
+    pro1=Product.objects.all()
+    b=len(pro1)
+    c=b-3
+    pro2=range(0,1)
     pro = Product.objects.all()
     categorys = Category.objects.annotate(total_products=Count('product'))
     
@@ -31,7 +35,8 @@ def productList(request, category_slug=None):
     pro = paginator.get_page(page)
     context = {
         'product_list':pro,
-        'category_list':categorys  
+        'category_list':categorys,
+        'pro_list':pro2
         }
     return render(request,template,context)
 
